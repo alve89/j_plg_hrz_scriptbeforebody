@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="system"	client="site"	method="upgrade">
+    <name>PLG_HRZ_SCRIPTBEFOREBODY</name>
+    <creationDate>Nov 2021</creationDate>
+	  <author>Stefan Herzog</author>
+    <authorEmail>joomla@devel.stefan-herzog.com</authorEmail>
+  	<authorUrl>github.com/alve89</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_HRZ_SCRIPTBEFOREBODY_INSTALL_DESC</description>
+    <files>
+        <filename plugin="scriptbeforebody">scriptbeforebody.php</filename>
+    </files>
+
+    <config>
+  		<fields name="params">
+  			<fieldset name="basic">
+  				<field name="scriptFiles"
+  					   type="textarea"
+  					   label="PLG_HRZ_SCRIPTBEFOREBODY_FIELD_SCRIPTFILES_LABEL"
+               description="PLG_HRZ_SCRIPTBEFOREBODY_FIELD_SCRIPTFILES_DESC"
+  					   required="true"
+               placeholder="/path/to/scriptfiles/"
+               rows="10"
+               cols="50"
+  				/>
+  			</fieldset>
+  		</fields>
+  	</config>
+
+    <languages folder="language/de-DE">
+  		<language tag="de-DE">de-DE.plg_system_scriptbeforebody.ini</language>
+  		<language tag="de-DE">de-DE.plg_system_scriptbeforebody.sys.ini</language>
+  	</languages>
+
+    <updateservers>
+    		<server type="extension" priority="1" name="PLG_HRZ_SCRIPTBEFOREBODY">https://raw.githubusercontent.com/alve89/j_plg_hrz_scriptbeforebody/master/updates.xml</server>
+  	</updateservers>
+</extension>
